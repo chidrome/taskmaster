@@ -8,7 +8,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import java.util.UUID;
 
 @DynamoDBTable(tableName = "taskmaster")
-public class Task {
+public class TaskInfo {
 
     private UUID id;
     String title;
@@ -16,9 +16,9 @@ public class Task {
     String status;
 
 
-    public Task(){}
+    public TaskInfo(){}
 
-    public Task(String title, String description, String status){
+    public TaskInfo(String title, String description, String status){
         this.title = title;
         this.description = description;
         this.status = status;
@@ -43,5 +43,21 @@ public class Task {
     @DynamoDBAttribute
     public String getStatus() {
         return status;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
