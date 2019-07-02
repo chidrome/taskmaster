@@ -45,7 +45,7 @@ public class TaskmasterIntegrationTests {
 
         tableRequest.setProvisionedThroughput(new ProvisionedThroughput(1L, 1L));
 
-        dynamoDBMapper.batchDelete((List<TaskInfo>)taskRepository.findAll());
+//        dynamoDBMapper.batchDelete((List<TaskInfo>)taskRepository.findAll());
     }
 
     @Test
