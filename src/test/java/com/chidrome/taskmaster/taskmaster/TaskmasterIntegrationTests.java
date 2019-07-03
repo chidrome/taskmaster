@@ -35,6 +35,7 @@ public class TaskmasterIntegrationTests {
 
     private static final String EXPECTED_TITLE = "first task";
     private static final String EXPECTED_DESCRIPTION = "creating a task";
+    private static final String EXPECTED_ASSIGNEE = "me";
     private static final String EXPECTED_STATUS = "available";
 
     @Before
@@ -50,7 +51,7 @@ public class TaskmasterIntegrationTests {
 
     @Test
     public void readWriteTestCase() {
-        TaskInfo dave = new TaskInfo(EXPECTED_TITLE, EXPECTED_DESCRIPTION, EXPECTED_STATUS);
+        TaskInfo dave = new TaskInfo(EXPECTED_TITLE, EXPECTED_DESCRIPTION, EXPECTED_ASSIGNEE, EXPECTED_STATUS);
         taskRepository.save(dave);
 
         List<TaskInfo> result = (List<TaskInfo>) taskRepository.findAll();

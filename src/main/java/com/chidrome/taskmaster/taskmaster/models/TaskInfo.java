@@ -13,14 +13,16 @@ public class TaskInfo {
     private UUID id;
     String title;
     String description;
+    String assignee;
     String status;
 
 
     public TaskInfo(){}
 
-    public TaskInfo(String title, String description, String status){
+    public TaskInfo(String title, String description, String assignee, String status){
         this.title = title;
         this.description = description;
+        this.assignee = assignee;
         this.status = status;
     }
 
@@ -43,6 +45,14 @@ public class TaskInfo {
     @DynamoDBAttribute
     public String getStatus() {
         return status;
+    }
+
+    public String getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(String assignee) {
+        this.assignee = assignee;
     }
 
     public void setId(UUID id) {
