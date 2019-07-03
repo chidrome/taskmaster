@@ -47,5 +47,5 @@ http://localhost:5000//tasks/{id}/assign/{assignee}
 
 **Testing**
 
-[Integration test class](src/test/java/com/esa/taskmaster/taskmaster/TaskMasterRepositoryIntegrationTest.java)
+[Integration test class](src/test/java/com/chidrome/taskmaster/taskmaster/TaskmasterIntegrationTests.java)
 ***
