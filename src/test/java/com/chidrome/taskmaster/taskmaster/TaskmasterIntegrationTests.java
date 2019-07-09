@@ -33,9 +33,9 @@ public class TaskmasterIntegrationTests {
     @Autowired
     TaskRepository taskRepository;
 
-    private static final String EXPECTED_TITLE = "first task";
-    private static final String EXPECTED_DESCRIPTION = "creating a task";
-    private static final String EXPECTED_ASSIGNEE = "me";
+    private static final String EXPECTED_TITLE = "Table";
+    private static final String EXPECTED_DESCRIPTION = "buy computer desk";
+    private static final String EXPECTED_ASSIGNEE = "paolo";
     private static final String EXPECTED_STATUS = "available";
 
     @Before
@@ -57,6 +57,6 @@ public class TaskmasterIntegrationTests {
         List<TaskInfo> result = (List<TaskInfo>) taskRepository.findAll();
 
         assertTrue("Not empty", result.size() > 0);
-        assertTrue("Should return the title", result.get(0).getTitle().equals(EXPECTED_TITLE));
+        assertTrue("Should return the title", result.get(1).getTitle().equals(EXPECTED_TITLE));
     }
 }

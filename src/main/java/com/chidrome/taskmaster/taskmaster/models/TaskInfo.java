@@ -15,15 +15,17 @@ public class TaskInfo {
     String description;
     String assignee;
     String status;
+    String image;
 
 
     public TaskInfo(){}
 
-    public TaskInfo(String title, String description, String assignee, String status){
+    public TaskInfo(String title, String description, String assignee, String status, String image){
         this.title = title;
         this.description = description;
         this.assignee = assignee;
         this.status = status;
+        this.image = image;
     }
 
     @DynamoDBHashKey
@@ -53,6 +55,14 @@ public class TaskInfo {
 
     public void setAssignee(String assignee) {
         this.assignee = assignee;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setId(UUID id) {
