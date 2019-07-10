@@ -33,6 +33,7 @@ public class TaskmasterController {
         return ResponseEntity.ok(taskRepository.findAll());
     }
 
+
     @PostMapping("/tasks")
     public ResponseEntity<String> createTask(@RequestParam String title, @RequestParam String description, @RequestParam String assignee){
         // Status should always start out as available
@@ -41,9 +42,9 @@ public class TaskmasterController {
         return ResponseEntity.ok("Task(s) created");
     }
 
-
+    @CrossOrigin
     @PutMapping("/tasks/{id}/state")
-    public ResponseEntity<String> updateStatus(@PathVariable String id){
+    public ResponseEntity<TaskInfo> updateStatus(@PathVariable String id){
         TaskInfo taskToUpdate = taskRepository.findById(id).get();
         if(taskToUpdate.getStatus().toLowerCase().equals("available")){
             taskToUpdate.setStatus("assigned");
@@ -53,7 +54,7 @@ public class TaskmasterController {
             taskToUpdate.setStatus("completed");
         }
         taskRepository.save(taskToUpdate);
-        return ResponseEntity.ok("Task has been updated");
+        return ResponseEntity.ok(taskToUpdate);
     }
 
     @GetMapping("/users/{name}/tasks")

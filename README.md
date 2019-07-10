@@ -7,7 +7,8 @@ Taskmaster is a full stack web app that allows users to enter and track tasks ac
 **Running the app:**
 
 Deployed:
-* [Deployed Site](http://taskmaster-env.p2inzhbxb8.us-east-1.elasticbeanstalk.com/tasks)
+* [Back End](http://taskmaster-env.p2inzhbxb8.us-east-1.elasticbeanstalk.com/tasks)
+* [Front End](http://taskmasterfront.s3-website-us-west-2.amazonaws.com/)
 
 Locally:
 - git clone this repo
