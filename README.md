@@ -48,6 +48,14 @@ http://localhost:5000/tasks/{id}/assign/{assignee}
 
 ***
 
+### Taskmaster DynamoDB Trigger with Lambda
+![Taskmaster DynamoDB Trigger](assets/Taskmaster DynamoDB Trigger.png)
+
+### Tasktopic SNS
+![Tasktopic SNS](assets/Taskmaster DynamoDB Trigger.png)
+
+***
+
 **Code**
 
 [Task Model class](src/main/java/com/chidrome/taskmaster/taskmaster/models/TaskInfo.java)
